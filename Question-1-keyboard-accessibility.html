@@ -3,239 +3,231 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>The funion</title>
+  <meta name="description" content="A satirical news website">
+  <title>The Funion</title>
   <style>
     *,
-*::after,
-*::before {
-  box-sizing: border-box;
-}
+    *::after,
+    *::before {
+      box-sizing: border-box;
+    }
 
-html {
-  position: relative;
-  min-height: 100%;
-}
+    html {
+      position: relative;
+      min-height: 100%;
+    }
 
-body {
-  margin: 30px; /* bottom = newsletter height */
-  font-family: Lato, sans-serif;
-}
+    body {
+      margin: 30px; /* bottom = newsletter height */
+      font-family: Lato, sans-serif;
+    }
 
-a{
-  color: #006b3a;
-}
-main a{
-  outline: none;
-}
-h2 {
-  margin-top: 0;
-}
+    a {
+      color: #006b3a;
+    }
 
-article h3 {
-  margin-top: 0;
-  font-size: 1.5em;
-  -webkit-margin-after: 0.83em;
-}
+    main a {
+      outline: none;
+    }
 
-.container {
-  max-width: 1000px;
-  margin: 0 auto;
-}
+    h2 {
+      margin-top: 0;
+    }
 
+    article h3 {
+      margin-top: 0;
+      font-size: 1.5em;
+      -webkit-margin-after: 0.83em;
+    }
 
-header {
-  margin-bottom: 48px;
-  box-shadow: 0 0 8px #bbb;
-  border-bottom: 1px solid #aaa;
-}
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+    }
 
-.logo {
-  text-align: center;
-  font-size: 32px;
-  margin: 0;
-  padding: 16px 0;
-  border-bottom: 1px solid #ddd;
-}
+    header {
+      margin-bottom: 48px;
+      box-shadow: 0 0 8px #bbb;
+      border-bottom: 1px solid #aaa;
+    }
 
-.offscreen {
-  position: absolute;
-  left: -10000px;
-  top: -10000px;
-}
+    .logo {
+      text-align: center;
+      font-size: 32px;
+      margin: 0;
+      padding: 16px 0;
+      border-bottom: 1px solid #ddd;
+    }
 
-.menu {
-  padding: 16px 48px;
-}
+    .offscreen {
+      position: absolute;
+      left: -10000px;
+      top: -10000px;
+    }
 
-.menu a {
-  color: #000;
-  text-decoration: none;
-  font-size: 18px;
-  margin-right: 18px;
-}
+    .menu {
+      padding: 16px 48px;
+    }
 
-.menu a:last-child {
-  margin-right: 0;
-}
+    .menu a {
+      color: #000;
+      text-decoration: none;
+      font-size: 18px;
+      margin-right: 18px;
+    }
 
-.menu .btn-search img {
-  vertical-align: top;
-  margin-right: 8px;
-  width: 22px;
-  height: 22px;
-}
+    .menu a:last-child {
+      margin-right: 0;
+    }
 
-article p {
-  line-height: 1.4;
-}
+    .menu .btn-search img {
+      vertical-align: top;
+      margin-right: 8px;
+      width: 22px;
+      height: 22px;
+    }
 
-.main-story {
-  clear: both;
-  overflow: hidden;
-  margin-bottom: 16px;
-  padding-bottom: 16px;
-}
+    article p {
+      line-height: 1.4;
+    }
 
-.main-story img {
-  width: 50%;
-}
+    .main-story {
+      clear: both;
+      overflow: hidden;
+      margin-bottom: 16px;
+      padding-bottom: 16px;
+    }
 
-.main-story .info {
-  margin-right: 50%;
-  padding-right: 16px;
-}
+    .main-story img {
+      width: 50%;
+    }
 
-.tier-header {
-  border-top: 1px solid #aaa;
-  margin-bottom: 15px;
-}
+    .main-story .info {
+      margin-right: 50%;
+      padding-right: 16px;
+    }
 
-.tier-header h2 {
-  font-size: 17px;
-  font-weight: 400;
-  text-transform: uppercase;
-  padding: 5px 15px;
-  display: inline-block;
-  margin: 0;
-  color: #fff;
-  background: #006b3a;
-}
+    .tier-header {
+      border-top: 1px solid #aaa;
+      margin-bottom: 15px;
+    }
 
-.side-by-side .column {
-  display: inline-block;
-  vertical-align: top;
-}
+    .tier-header h2 {
+      font-size: 17px;
+      font-weight: 400;
+      text-transform: uppercase;
+      padding: 5px 15px;
+      display: inline-block;
+      margin: 0;
+      color: #fff;
+      background: #006b3a;
+    }
 
-.side-by-side article img {
-  max-width: 100%;
-}
+    .side-by-side .column {
+      display: inline-block;
+      vertical-align: top;
+    }
 
-.side-by-side .column:first-child {
-  width: 70%;
-  padding-right: 16px;
-  border-right: 1px solid #aaa;
-}
+    .side-by-side article img {
+      max-width: 100%;
+    }
 
-.side-by-side .column:last-child {
-  padding-left: 16px;
-  width: 29%; /* Account for whitespace gap from display: inline-block */
-}
+    .side-by-side .column:first-child {
+      width: 70%;
+      padding-right: 16px;
+      border-right: 1px solid #aaa;
+    }
 
-.side-by-side .column:last-child .headline {
-  font-size: 18px;
-}
+    .side-by-side .column:last-child {
+      padding-left: 16px;
+      width: 29%; /* Account for whitespace gap from display: inline-block */
+    }
 
-.three-col {
-  margin-bottom: 100px;
-}
+    .side-by-side .column:last-child .headline {
+      font-size: 18px;
+    }
 
-.three-col h2,
-.three-col h3 {
-  margin-top: 0;
-  font-size: 16px;
-}
+    .three-col {
+      margin-bottom: 100px;
+    }
 
-.three-col .columns {
-  display: flex;
-}
+    .three-col h2,
+    .three-col h3 {
+      margin-top: 0;
+      font-size: 16px;
+    }
+    
+    .three-col .columns {
+      display: flex;
+    }
 
-.three-col .columns article {
-  flex: 1;
-  margin-right: 18px;
-}
+    .three-col .columns article {
+      flex: 1;
+      margin-right: 18px;
+    }
 
-.three-col img {
-  width: 100%;
-}
+    .three-col img {
+      width: 100%;
+    }
 
-.three-col .columns article:last-child {
-  margin-right: 0;
-}
+    .three-col .columns article:last-child {
+      margin-right: 0;
+    }
 
-.newsletter {
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  height: 60px;
-  width: 100%;
-  background: #000;
-  color: #fff;
-  border-top: 1px solid #aaa;
-}
+    .newsletter {
+      position: relative; /* Changed from absolute to relative */
+      height: 60px;
+      width: 100%;
+      background: #000;
+      color: #fff;
+      border-top: 1px solid #aaa;
+      padding: 10px 0; /* Added padding */
+    }
 
-.newsletter h3 {
-  display: inline-block;
-  margin-right: 16px;
-}
-
-/* Helpers */
-.pull-right {
-  float: right;
-}
-
+    .newsletter h3 {
+      display: inline-block;
+      margin-right: 16px;
+    }
+    
+    /* Helpers */
+    .pull-right {
+      float: right;
+    }
   </style>
 </head>
 
 <body>
-  <header>
+<header>
+        <div class="container">
+          <h1 class="logo">The Funion</h1>
+          <nav class="menu">
+            <a href="#">Home</a>
+            <a href="#">Politics</a>
+            <a href="#" tabindex="-1">Business</a>
+            <a href="#">Entertainment</a>
+            <a href="#">Sports</a>
+            <form class="btn-search pull-right" action="#" method="GET" role="search">
+            <input type="text" placeholder="Search..." aria-label="Search" required>
+            <button type="submit">
+            <img src="https://raw.githubusercontent.com/udacity/ud891/2de2a0688c68809a3b453db3a24b1a59e8401459/lesson2-focus/02-dom-order/images/search.svg" alt="Search" />
+            </button>
+            </form>
+          </nav>
+        </div>
+      </header>
 
-    <div class="container">
-      <h1 class="logo">The Funion</h1>
-      
-      <!-- Maybe this could be improved with aria-activedescendant later? -->
-      <nav class="menu">
-        <a href="#">Home</a>
-        <a href="#">Politics</a>
-        <a href="#" tabindex="-1">Business</a>
-        <a href="#">Entertainment</a>
-        <a href="#">Sports</a>
-        <a href="#" class="btn-search pull-right"><img src="https://raw.githubusercontent.com/udacity/ud891/2de2a0688c68809a3b453db3a24b1a59e8401459/lesson2-focus/02-dom-order/images/search.svg" alt="Search" />Search</a> 
-
-      </nav>
-    </div>
-  </header>
-  <div class="newsletter">
-    <div class="container">
-      <h3>Like the Funion? Consider joining our newsletter!</h3>
-      <input type="text">
-      <button type="button" onfocus="getFocus()">Sign up</button></div>
-      
-    </div>
-  </div>
   <main class="container">
     <h2 class="offscreen">Top story</h2>
     <article class="main-story">
       <img class="pull-right" src="https://github.com/udacity/ud891/blob/gh-pages/lesson2-focus/02-dom-order/images/cat.jpg?raw=true" alt="A cat staring menacingly off into space">
       <div class="info">
         <h3 class="headline">Study shows 9 out of 10 cats quietly judging their owners as they sleep</h3>
-        <p>
-          GRAND RAPIDS, MILorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
+        <p>GRAND RAPIDS, MILorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
           aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. <a href="#">Read More</a>
-          
         </p>
       </div>
     </article>
-  
+    
     <div class="side-by-side">
       <div class="column">
         <div class="tier-header">
@@ -247,19 +239,20 @@ article p {
           <img src="https://github.com/udacity/ud891/blob/gh-pages/lesson2-focus/02-dom-order/images/bee.jpg?raw=true" alt="A bee on top of a flower" />
         </article>
       </div>
+      
       <div class="column">
         <article>
           <img src="https://github.com/udacity/ud891/blob/gh-pages/lesson2-focus/02-dom-order/images/telephone.jpg?raw=true" alt="A red, London telephone booth" />
           <div class="info">
             <h3 class="headline">Telephone booths. How is this still a thing?</h3>
-            <p>
-              LONDON-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+            <p>LONDON-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
               irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. <a href="#">Read More</a>
             </p>
           </div>
         </article>
       </div>
     </div>
+    
     <div class="three-col">
       <div class="tier-header">
         <h2>Recommended</h2>
@@ -275,6 +268,7 @@ article p {
           <img src="https://github.com/udacity/ud891/blob/gh-pages/lesson2-focus/02-dom-order/images/coffee.jpg?raw=true" alt="A cup of coffee on a table" />
           <div class="info">
             <h3 class="headline">San Franciscans are losing their minds over this third wave, artisanal, fair trade, handcrafted, locavore coffee. <a href="#">Read More</a></h3>
+          </div>
         </article>
         <article>
           <img src="https://github.com/udacity/ud891/blob/gh-pages/lesson2-focus/02-dom-order/images/football.jpg?raw=true" alt="A football player hands the ball off to another player" />
@@ -284,18 +278,29 @@ article p {
         </article>
       </div>
     </div>
-    
   </main>
-  <!--   stuff can be added here :)
-  <footer>
-  </footer>
-  -->
-  
-  <script>
-    function getFocus() {
-      window.open('https://aidaform.com/templates/thank-you-page-with-redirects.html','mywindow').focus()
-    }
-    </script>
-</body>
 
+  <footer class="newsletter">
+    <div class="container">
+      <h3>Like the Funion? Join our newsletter!</h3>
+      <input type="text" placeholder="Your email" aria-label="Enter your email" required>
+      <button type="button" onclick="showThankYou()">Sign up</button>
+    </div>
+  </footer>
+
+  <div id="thank-you-modal" style="display: none; background: rgba(0, 0, 0, 0.8); color: white; padding: 20px; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 1000;">
+    <h2>Thank You!</h2>
+    <p>You have successfully signed up for our newsletter.</p>
+    <button onclick="closeThankYou()">Close</button>
+  </div>
+
+  <script>
+    function showThankYou() {
+      document.getElementById('thank-you-modal').style.display = 'block';
+    }
+    function closeThankYou() {
+      document.getElementById('thank-you-modal').style.display = 'none';
+    }
+  </script>
+</body>
 </html>
