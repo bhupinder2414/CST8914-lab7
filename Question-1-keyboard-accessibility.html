@@ -211,10 +211,10 @@
 </head>
 
 <body>
-  <header>
+    <header role="banner">
     <div class="container">
       <h1 class="logo">The Funion</h1>
-      <nav class="menu">
+      <nav class="menu" role="navigation" aria-label="Main Navigation">
         <a href="#">Home</a>
         <a href="#">Politics</a>
         <a href="#">Business</a>
@@ -230,7 +230,7 @@
     </div>
   </header>
 
-  <main class="container">
+  <main class="container" role="main">
     <h2 class="offscreen">Top story</h2>
     <article class="main-story">
       <img class="pull-right" src="https://github.com/udacity/ud891/blob/gh-pages/lesson2-focus/02-dom-order/images/cat.jpg?raw=true" alt="A cat staring menacingly off into space">
@@ -297,7 +297,7 @@
     </div>
   </main>
 
-  <footer class="newsletter">
+  <footer class="newsletter" role="contentinfo">
     <div class="container">
         <h1>Like the Funion? Join our newsletter!</h1>
             <input type="email" id="email" placeholder="Your email" aria-label="Enter your email" required>
