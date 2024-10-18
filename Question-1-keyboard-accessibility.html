@@ -19,7 +19,7 @@
 
     body {
       margin: 30px; /* bottom = newsletter height */
-      font-family: Lato, sans-serif;
+      font-family: Arial, sans-serif;
     }
 
     a {
@@ -175,21 +175,28 @@
       margin-right: 0;
     }
 
-    .newsletter {
+    .newsletter .newsletter h3 {
       position: relative; /* Changed from absolute to relative */
       height: 60px;
       width: 100%;
       background: #000;
       color: #fff;
       border-top: 1px solid #aaa;
-      padding: 10px 0; /* Added padding */
-    }
-
-    .newsletter h3 {
       display: inline-block;
       margin-right: 16px;
+      margin-top: 10px;
+      border: 1px solid #ccc;
+      text-align: center; /* Center align newsletter on mobile */
+      padding: 10px 0; /* Added padding */
     }
-    
+    .message {
+       margin-top: 10px;
+       color: green;
+    }
+    .error {
+       color: red;
+     }
+   
     /* Focus styles for links, buttons, and input fields */
     a:focus, button:focus, input:focus {
       outline: 3px solid #006b3a; /* Change outline color and style */
@@ -292,10 +299,12 @@
 
   <footer class="newsletter">
     <div class="container">
-      <h3>Like the Funion? Join our newsletter!</h3>
-      <input type="text" placeholder="Your email" aria-label="Enter your email" required>
-      <button type="button" onclick="showThankYou()">Sign up</button>
-    </div>
+        <h1>Like the Funion? Join our newsletter!</h1>
+            <input type="email" id="email" placeholder="Your email" aria-label="Enter your email" required>
+            <button type="button" onclick="showThankYou()">Sign up</button>
+            <p id="email-message" class="message"></p>
+            <p id="error-message" class="error"></p>
+        </div>
   </footer>
 
   <div id="thank-you-modal" style="display: none; background: rgba(0, 0, 0, 0.8); color: white; padding: 20px; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 1000;">
@@ -305,12 +314,28 @@
   </div>
 
   <script>
+    const emailInput = document.getElementById('email');
+    const errorMessage = document.getElementById('error-message');
+
     function showThankYou() {
-                document.getElementById('thank-you-modal').style.display = 'block';
-             } 
-    function closeThankYou() {
-      document.getElementById('thank-you-modal').style.display = 'none';
+        if (emailInput.value.trim() !== '' && validateEmail(emailInput.value.trim())) { // Check if email input is valid
+            document.getElementById('thank-you-modal').style.display = 'block';
+            emailInput.value = ''; // Clear the email input after submission
+            errorMessage.textContent = ''; // Clear any error messages
+        } else {
+            errorMessage.textContent = 'Please enter a valid email address.'; // Display error message
+        }
     }
-  </script>
+
+    function closeThankYou() {
+        document.getElementById('thank-you-modal').style.display = 'none';
+    }
+
+    // Function to validate email format
+    function validateEmail(email) {
+        const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return re.test(email);
+    }
+</script>
 </body>
 </html>
