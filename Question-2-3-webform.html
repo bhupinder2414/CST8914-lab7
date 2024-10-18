@@ -72,14 +72,6 @@
                 <input id="name" name="name" type="text" aria-required="true" aria-describedby="nameDesc" />
                 <span id="nameDesc" class="visuallyhidden">Full name is required.</span>
             </div>
-
-            <!-- Biography text area with inline instructions for screen readers -->
-            <div class="control">
-                <label for="biography"><strong>Biography</strong> <span class="required">*</span></label>
-                <textarea id="biography" name="biography" rows="6" cols="40" aria-required="true" aria-describedby="bioDesc" placeholder="Include examples on your skills in JavaScript."></textarea>
-                <span id="bioDesc" class="visuallyhidden">Biography is required. Include examples of your JavaScript skills.</span>
-            </div>
-
             <!-- Gender section with select options properly grouped and labeled -->
             <div class="control">
                  <label for="gender"><strong>Gender</strong> <span class="required">*</span></label>
@@ -90,6 +82,12 @@
                       <option value="Other">Other</option>
                   </select>
                   <span id="genderDesc" class="visuallyhidden">Gender is required. Please select your gender.</span>
+            </div>
+             <!-- Biography text area with inline instructions for screen readers -->
+            <div class="control">
+                <label for="biography"><strong>Biography</strong> <span class="required">*</span></label>
+                <textarea id="biography" name="biography" rows="6" cols="40" aria-required="true" aria-describedby="bioDesc" placeholder="Include examples on your skills in JavaScript."></textarea>
+                <span id="bioDesc" class="visuallyhidden">Biography is required.</span>
             </div>
         </fieldset>
 
